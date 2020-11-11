@@ -9,6 +9,7 @@
       -#   %p ログイン
       .main_header__wrapper__right__user
         .main_header__wrapper__right__user__name
-          %p ユーザー名
+          %p 
+            = @user.username
         .main_header__wrapper__right__user__image
           = image_tag "header/user_image.png"

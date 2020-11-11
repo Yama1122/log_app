@@ -1,0 +1,36 @@
+= render "layouts/sub_header"
+.userSignUp
+  .userSignUp__container
+    .userSignUp__container__name
+      %h2 新規登録画面
+    .userSignUp__container__form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        .userSignUp__container__form__username
+          .userSignUp__container__form__username--name
+            ユーザー名
+          .userSignUp__container__form__username--form 
+            = f.text_field :username,placeholder:"ユーザー名を入力してください", autofocus: true
+        .userSignUp__container__form__gender
+          .userSignUp__container__form__gender--name
+            性別
+          .userSignUp__container__form__gender--form
+            = f.collection_select :gender_id, Gender.all, :id, :name, {prompt:"選択してください"}, {class:""}
+        .userSignUp__container__form__age
+          .userSignUp__container__form__age--name
+            年齢
+          .userSignUp__container__form__age--form
+            = f.collection_select :age_id, Age.all, :id, :name, {prompt:"選択してください"}, {class:""}
+        .userSignUp__container__form__password
+          .userSignUp__container__form__password--name
+            パスワード
+          .userSignUp__container__form__password--form
+            = f.password_field :password, autocomplete: "new-password"
+        .userSignUp__container__form__repassword
+          .userSignUp__container__form__repassword--name
+            パスワード確認
+          .userSignUp__container__form__repassword--form
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+        .userSignUp__container__form__submit
+          = f.submit "登録する"        
+       
+     

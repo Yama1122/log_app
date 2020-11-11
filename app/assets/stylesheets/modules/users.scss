@@ -1,0 +1,279 @@
+*{
+  box-sizing: border-box;
+
+.userMypage{
+  &__container{
+    // background-color: #eee;
+    background-color: burlywood;
+    height:100vh;
+    display:flex;
+    background-image: url(userMypage.webp);
+    background-size:cover;
+    &__left{
+      width:50%;
+      // background-color: indigo;
+      padding-top: 80px;
+      &__list{
+        width:70%;
+        margin: 0 auto;
+        // background-color: antiquewhite;
+        background-color: beige;
+        // height:500px;
+        border-radius: 5px;
+        &__profile{
+          // height: 120px;
+          width:100%;
+          background-color: burlywood;
+          border-radius: 5px 5px 0 0;
+          display:flex;
+          padding:20px;
+          &__left{
+            width:30%;
+            border-radius: 5px;
+            padding-top: 15px;
+            img{
+              width:80%;
+              border-radius: 5px;
+              // height:90%;
+              margin:0 20px;
+              // padding-top: 20px;
+              border-radius: 5px;
+            }
+          }
+          &__right{
+            width:70%;
+            padding:10px;
+            &__name{
+              font-weight: bold;
+              font-size:20px;
+            }
+            &__class{
+              padding:10px 30px;
+              font-weight: bold;
+              color: #333;
+            }
+            &__number{
+              padding:10px 30px;
+              font-weight: bold;
+              padding-bottom: 0;
+              color:#333;
+            }
+          }
+        }
+        &__links{
+          // height:290px;
+          &__name{
+            text-align:center;
+            font-weight: bold;
+            color:#bbb;
+            padding:10px 0;
+          }
+          &__index{
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 12px;
+            color:slateblue;
+            padding:10px;
+            text-decoration: none;
+            &:hover{
+              color:skyblue;
+            }
+            i{
+              padding-left:5px;
+            }
+          }
+          &__contents{
+            width:100%;
+            // height:300px;
+            // overflow: scroll;
+            // background-color: blue;
+            &__content{
+              margin: 0 auto;
+              width:100%;
+              height:100px;
+              &:last-child{
+                border-radius: 0 0 5px 5px;
+              }
+              &:hover{
+                // background-color: beige;
+                background-color: antiquewhite;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__right{
+      width:50%;
+      // background-color: indianred;
+    }
+  }
+}
+
+.create_boardBtn{
+  position: fixed;
+  bottom:50px;
+  right:50px;
+  display: block;
+  height:120px;
+  width:120px;
+  background-color: darkgray;
+  text-align: center;
+  color:white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding-top: 20px;
+  &:hover{
+    opacity: 0.8;
+  }
+  i{
+    font-size: 60px;
+  }
+  p{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.userSignUp{
+  background-color: #eee;
+  padding-top: 40px;
+  height:100vh;
+  &__container{
+    // height:500px;
+    width:50%;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    h2{
+      font-weight: bold;
+      font-size: 20px;
+      padding: 15px;
+      letter-spacing: 2px;
+      border-bottom: solid 1px #eee;
+    }
+    &__form{
+      padding-top: 40px;
+      padding-left: 30px;
+      padding-bottom: 40px;
+      margin: 0 auto;
+      width:70%;
+      &__submit{
+        input{
+          background-color: burlywood;
+          border-radius: 10px;
+          width:100px;
+          height:60px;
+          border:0;
+          color:#fff;
+          font-weight: bold;
+          &:hover{
+            opacity:0.8;
+          }
+        }
+      }
+      &__login{
+        text-align: right;
+      }
+      &__username{
+        display: flex;
+        // justify-content: flex-start;
+        padding-bottom: 30px;
+        &--name{
+          padding-right:46px;
+          font-weight: bold;
+          font-size:14px;
+          line-height: 40px;
+        }
+        &--form{
+          input{
+            width:300px;
+            height:40px;
+          }
+        }
+      }
+      &__gender{
+        display: flex;
+        // justify-content: center;
+        padding-bottom: 30px;
+        &--name{
+          padding-right:89px;
+          font-weight: bold;
+          font-size:14px;
+          line-height: 40px;
+        }
+        &--form{
+          select{
+            width:200px;
+            height:40px;
+            // color:#7C7C7C;
+          }
+        }
+      }
+      &__age{
+        display: flex;
+        // justify-content: center;
+        padding-bottom: 30px;
+        &--name{
+          padding-right:89px;
+          font-weight: bold;
+          font-size:14px;
+          line-height: 40px;
+        }
+        &--form{
+          select{
+            width:200px;
+            height:40px;
+            // color:#7C7C7C;
+          }
+        }
+      }
+      &__password{
+        display: flex;
+        // justify-content: center;
+        padding-bottom: 30px;
+        &--name{
+          padding-right:48px;
+          font-weight: bold;
+          font-size:14px;
+          line-height: 40px;
+        }
+        &--form{
+          input{
+            width:300px;
+            height:40px;
+          }
+        }
+      }
+      &__repassword{
+        display: flex;
+        // justify-content: center;
+        padding-bottom: 30px;
+        &--name{
+          padding-right:20px;
+          font-weight: bold;
+          font-size:14px;
+          line-height: 40px;
+        }
+        &--form{
+          input{
+            width:300px;
+            height:40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.field{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  label{
+    padding-right:20px;
+  }
+}

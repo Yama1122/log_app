@@ -1,5 +1,44 @@
 = render "layouts/header"
 
+.userMypage
+  .userMypage__container
+    .userMypage__container__left
+      .userMypage__container__left__list
+        .userMypage__container__left__list__profile
+          .userMypage__container__left__list__profile__left
+            = image_tag "header/user_image.png"
+          .userMypage__container__left__list__profile__right
+            .userMypage__container__left__list__profile__right__name
+              %p 
+                = @user.username
+            .userMypage__container__left__list__profile__right__class
+              %p 
+                %span
+                  性別：
+                %span 
+                  = @user.gender.name
+            .userMypage__container__left__list__profile__right__number
+              %p 
+                %span
+                  年齢：
+                %span 
+                  = @user.age.name 
+        .userMypage__container__left__list__links
+          .userMypage__container__left__list__links__name
+            %p 《 ボードを選択する 》
+          .userMypage__container__left__list__links__contents 
+            .userMypage__container__left__list__links__contents__content
+            .userMypage__container__left__list__links__contents__content
+            .userMypage__container__left__list__links__contents__content
+            .userMypage__container__left__list__links__contents__content
+            = link_to "#",class:"userMypage__container__left__list__links__index" do
+              %p ボード一覧ページへ
+              = icon("fas","chevron-right")
+    .userMypage__container__right
+
+= render "layouts/boardBtn"
+  
+
         
         
         

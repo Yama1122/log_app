@@ -43,3 +43,14 @@
     }
   }
 }
+
+.sub_header{
+  &__wrapper{
+    background-color: antiquewhite;
+    height:100px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 28px;
+  }
+}
